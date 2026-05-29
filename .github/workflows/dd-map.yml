@@ -1,0 +1,20 @@
+name: Deep Desert Weekly
+
+on:
+  schedule:
+    - cron: '0 7 * * 2'
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Discord Message
+        run: |
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d '{
+            "content":"🏜️ Deep Desert actualizado\n\n🗺️ https://dune.gaming.tools/deep-desert"
+          }' \
+          "${{ secrets.WEBHOOK_URL }}"
