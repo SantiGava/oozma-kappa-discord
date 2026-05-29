@@ -2,7 +2,7 @@ name: Deep Desert Weekly
 
 on:
   schedule:
-    - cron: '0 7 * * 2'
+    - cron: '0 10 * * 2'
   workflow_dispatch:
 
 jobs:
@@ -15,6 +15,6 @@ jobs:
           curl -H "Content-Type: application/json" \
           -X POST \
           -d '{
-            "content":"🏜️ Deep Desert actualizado\n\n🗺️ https://dune.gaming.tools/deep-desert"
+            "content":"@everyone\n\n🏜️ Nuevo ciclo del Deep Desert\n\n🗺️ Mapa interactivo actualizado\nhttps://dune.gaming.tools/deep-desert\n\n🔍 Revisar:\n🔹 Nodos de Titanium y Stravidium\n🔹 Testing Stations\n🔹 Loot semanal\n\n🎒 Llevar:\n⛽ Combustible\n🔧 Soplete\n💧 Agua (porque siempre hay alguien que se olvida)\n\n🏗️ Si arman base DD, avisen así nos organizamos.\n\n⚔️ Planifiquen sus rutas, coordinen logística y no se regalen si van a PvP.\n\n🌵 The spice must flow."
           }' \
           "${{ secrets.WEBHOOK_URL }}"
